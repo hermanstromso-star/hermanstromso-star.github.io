@@ -39,30 +39,25 @@ nav {
 }
 
 img {
-    position: fixed;
+    position:fixed;
+   width: 122px;
 
-    border-radius: 25px;
+   
 
-    height: 80px;
-    width: 80px;
-
-    padding-left: 5px;
-    padding: 5px;
+   
+    
 }
 
 footer {
-margin:10px;
-background-color: rgb(129, 129, 129);
+position: sticky;
+
+bottom: 0;
+margin: 10px;
 margin-bottom: auto;
-text-align: center;
 padding-top: 20px;
 
+background-color: rgb(129, 129, 129);
+text-align: center;
 border-radius: 50px 50px 0 0;
-
-
-
    
-   
- 
-    
 }
