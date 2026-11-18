@@ -1,0 +1,84 @@
+html{
+    background-color: antiquewhite;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1300px;
+
+   
+    margin: 0 auto;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Google Sans Flex', sans-serif;
+
+   
+    display: grid;
+
+    /* 2. Definerer kolonnene: 90px til venstre, og resten (1fr) til høyre */
+  
+
+    /* 3. Definerer radene: Header tilpasser seg, Main tar all ledig plass, Footer tilpasser seg */
+    grid-template-rows: auto 1fr auto;
+
+    /* 4. Tegner opp kartet for hvor alt skal ligge! */
+    grid-template-areas: 
+        "hjorne-logo header"
+        "main main"
+        "footer footer";
+}
+
+/* Plasserer hvert element i sitt felt på kartet */
+
+#hjorne-logo {
+    
+    position: sticky;
+    top: 0;
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+header {
+    border-style: dashed;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.5rem;
+    background-color: rgb(145, 145, 145);
+    padding-right: 930px;
+}
+
+nav {
+    border-style: dashed;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 300%;
+}
+
+main {
+    border-style: dashed;
+    grid-area: main;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+footer {
+    border-style: dashed;
+    grid-area: footer;
+    position: sticky; /* Holder den synlig i bunnen av rutenettet */
+    bottom: 0;
+    z-index: 1000;
+
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}

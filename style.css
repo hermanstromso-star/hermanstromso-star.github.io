@@ -1,68 +1,74 @@
+html{
+    background-color: antiquewhite;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
-    display: flex;
-    flex-direction: column; 
-    margin: 0;
+    max-width: 1300px;
+    
+    margin: 0 auto;
     padding: 0;
-    min-height: auto;
-    background-color: #ffffff; 
+    min-height: 100vh;
+    font-family: 'Google Sans Flex', sans-serif;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "hjorne-logo header"
+        "main main"
+        "footer footer";
+}
+
+
+#hjorne-logo {
+    
+    position: sticky;
+    top: 0;
+    width: 90px;
+    height: auto;
+    display: block;
 }
 
 header {
+    border-style: dashed;
     position: sticky;
     top: 0;
     z-index: 1000;
 
-  
-  
-    margin-left: 90px;
 
-    display: flex; 
-    justify-content: flex-start;
+    display: flex;
     align-items: center;
-    
-    padding: 0.08rem;
-    padding-left: 1.5rem;
-    
+    padding: 0rem 1.5rem;
     background-color: rgb(145, 145, 145);
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: 'Google Sans Flex', sans-serif;
-    
-    border-radius: 0 0 0 33px;
-
-  
-    
-    
+    padding-right: 930px;
 }
 
 nav {
- 
-  margin-left: auto;
-  right: 10px;
+    border-style: dashed;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 300%;
 }
+
 main {
-}
-img {
-    position:fixed;
-   width: 121.4px;
-
-   
-
-   
-    
+    border-style: dashed;
+    grid-area: main;
+    padding: 1rem;
+    background-color: #ffffff;
 }
 
 footer {
-position: fixed; 
-    bottom: 0;       
-    left: 0px;      
-    right: 0;        
-    
-    background-color: #111111; 
-    color: #ffffff;          
-    text-align: center;       
+    border-style: dashed;
+    grid-area: footer;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
     padding: 1rem;
-    z-index: 1000;           
-}
-   
 }
