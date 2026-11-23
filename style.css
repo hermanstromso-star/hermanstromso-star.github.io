@@ -1,8 +1,8 @@
 html{
-    background-color: antiquewhite;
+    background-color: #1e1e1e;
 }
 
-*::before, *::after {
+*,*::before, *::after {
     box-sizing: border-box;
 }
 
@@ -17,58 +17,48 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-        "hjorne-logo header"
-        "main main"
-        "footer footer";
+        "header header"
+        "main bildet"
+        
 }
 
 
-#hjorne-logo {
-    
-    position: sticky;
-    top: 0;
-    width: 90px;
-    height: auto;
-    display: block;
+
+
+#id-photo {
+    grid-area: bildet;
+    display: flex;
+    justify-self: right;
+    border-radius: 10%;
+    width: 500px;
 }
+
 
 header {
-    border-style: dashed;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    grid-area: header;
+    
 
-
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    padding: 0rem 1.5rem;
+    font-size: clamp(0.85rem, 1.5vw, 1.2rem);
+    padding: clamp(0.5rem, 1.5vw, 1rem) clamp(0.75rem, 2vw, 1.5rem);
     background-color: rgb(145, 145, 145);
-    padding-right: 930px;
+    padding-right: auto;
+ 
+  
 }
 
 nav {
-    border-style: dashed;
-    display: flex;
-    gap: 1.5rem;
-    margin-left: 300%;
+  display: flex;
+    flex-direction: row;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    margin-left: auto;
 }
-
 main {
-    border-style: dashed;
     grid-area: main;
-    padding: 1rem;
+   padding: clamp(1rem, 3vw, 2.5rem);
     background-color: #ffffff;
+    border-radius: 10px;
 }
 
-footer {
-    border-style: dashed;
-    grid-area: footer;
-    position: sticky;
-    bottom: 0;
-    z-index: 1000;
-
-    background-color: #111111;
-    color: #ffffff;
-    text-align: center;
-    padding: 1rem;
-}
